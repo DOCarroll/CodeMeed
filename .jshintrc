@@ -1,5 +1,7 @@
 {
   "node": true,
+  "global app": true,
+  "Firebase": false,
   "browser": true,
   "esnext": true,
   "bitwise": true,
