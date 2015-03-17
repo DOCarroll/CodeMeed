@@ -1,0 +1,15 @@
+ <div ng-controller="NavCtrl" >
+  <h4>Post a New Bounty</h4>
+    <form class="cmt-form" role="search" ng-submit="submitPost()" ng-show="signedIn()">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Title" ng-model="post.title">
+      </div>
+      <div class="form-group">
+      <textarea class="form-control" placeholder="Code" ng-model="post.content"></textarea>
+      </div>
+      <div class="form-group">
+      <textarea class="form-control" placeholder="Text" ng-model="post.body"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>

@@ -10,17 +10,15 @@
       </span>
     </div>
   </div>
-
+  <h4>Posted Bounties</h4>
   <div class="post row" ng-repeat="(key,post) in posts">
     <div class="col-md-8 col-xs-10">
       <div class="info">
-        <a ng-href="{{ post.url }}">
+        <a ng-href="#/posts/{{ post.$id }}">
           {{ post.title }}
-          <span class="url">({{ post.url}})</span>
         </a>
       </div>
       <div>
-        <a ng-href="#/posts/{{ post.$id }}">comments</a>
       </div>
     </div>
   </div>

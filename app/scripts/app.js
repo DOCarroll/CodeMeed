@@ -25,14 +25,6 @@ var app = angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
       })
@@ -61,6 +53,13 @@ var app = angular
       .when('/users/:userId', {
         templateUrl: 'views/profile.html',
         controller: 'ProfileCtrl'
+      })
+      .when('/upload', {
+        templateUrl: 'views/upload.html',
+      })
+      .when('/account', {
+        templateUrl: '/views/account.html',
+        controller: 'ProfileCtrl',
       })
       .otherwise({
         redirectTo: '/'

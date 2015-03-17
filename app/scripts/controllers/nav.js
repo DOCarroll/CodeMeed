@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
-  $scope.post = {url: 'http://', title: ''};
+  $scope.post = {content: '', body: '', title: ''};
   $scope.signedIn = Auth.signedIn;
   $scope.logout = Auth.logout;
   $scope.user = Auth.user;
@@ -11,7 +11,7 @@ app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
     $scope.post.creatorUID = $scope.user.uid;
     Post.create($scope.post).then(function (ref) {
       $location.path('/posts/' + ref.name());
-      $scope.post = {url: 'http://', title: ''};
+      $scope.post = {content: '', body: '', title: ''};
     });
   };
 
