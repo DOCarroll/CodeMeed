@@ -57,10 +57,6 @@ var app = angular
       .when('/upload', {
         templateUrl: 'views/upload.html',
       })
-      .when('/account', {
-        templateUrl: '/views/account.html',
-        controller: 'ProfileCtrl',
-      })
       .otherwise({
         redirectTo: '/'
       });

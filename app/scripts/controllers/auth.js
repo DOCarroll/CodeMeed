@@ -13,18 +13,6 @@ app.controller('AuthCtrl', function ($scope, $location, Auth, user) {
     });
   };
 
-  $scope.update = function () {
-    Auth.update($scope.user).then(function (){
-      oldEmail: user.email;
-      newEmail: $scope.user.email;
-    }).then(function (){
-      $location.path('/');
-    }, function (error){
-      $scope.error = error.toString();
-    });
-
-  };
-
   $scope.register = function () {
     Auth.register($scope.user).then(function(user) {
       return Auth.login($scope.user).then(function() {
