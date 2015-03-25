@@ -57,6 +57,14 @@ var app = angular
       .when('/upload', {
         templateUrl: 'views/upload.html',
       })
+      .when('/edit/:postId', {
+        templateUrl: 'views/edit.html',
+        controller: 'PostsCtrl'
+      })
+      .when('/editComment/:postId/:commentId', {
+        templateUrl: 'views/editComment.html',
+        controller: 'PostViewCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

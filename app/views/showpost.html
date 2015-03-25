@@ -1,6 +1,7 @@
 <div>
   <h4>
 	{{post.title}} :{{post.creator}}
+  <a ng-href="#/edit/{{post.$id}}">edit</a>
   </h4>
   <p>{{post.body}}</p>
   <pre>{{post.content}}</pre>
@@ -17,6 +18,10 @@
         ng-click="deleteComment(comment)"
         ng-show="signedIn() && comment.creatorUID === user.uid">
         (delete)
+      </a>
+      <a ng-href="#/editComment/{{post.$id}}/{{comment.$id}}"
+        ng-show="signedIn() && comment.creatorUID === user.uid">
+        Edit
       </a>
       </p>
         

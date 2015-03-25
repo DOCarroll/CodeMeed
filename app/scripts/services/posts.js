@@ -3,6 +3,7 @@
 app.factory('Post', function ($firebase, FIREBASE_URL) {
 	var ref = new Firebase(FIREBASE_URL);
 	var posts = $firebase(ref.child('posts')).$asArray();
+	// var editPost = $firebase(ref.child('posts/$id'));
 
 	var Post = {
 		all: posts,
@@ -21,6 +22,9 @@ app.factory('Post', function ($firebase, FIREBASE_URL) {
 		},
 		comments: function (postId) {
 			return $firebase(ref.child('comments').child(postId)).$asArray();
+		},
+		comment: function(postId, commentId) {
+			return $firebase(ref.child('comments').child(postId).child(commentId)).$asObject();
 		}
 	};
 	return Post;
