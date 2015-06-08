@@ -1,3 +1,14 @@
+/* Profile Styles */
+.name {
+  font-size:40px;
+}
+
+.h4 {
+  background-color: #027D90;
+  color:white;
+}
+
+
 .bounties {
   margin-left:0;
   margin-right:0;
@@ -12,7 +23,6 @@
   color: #000;
   padding: 0.2em 0;
 }
-
 body {
   padding: 0;
 }
