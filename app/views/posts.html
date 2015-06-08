@@ -1,4 +1,44 @@
-<div class="container posts-page">
+<div class="container posts-page bounties">
+  <h3>Bounties</h3>
+  <div class="post row" ng-repeat="post in posts">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-md-9 col-xs-11">
+
+      <div class="info">
+           <a ng-href="#/posts/{{ post.$id }}"><h4>{{ post.title }}</h4></a>
+      </div>
+      <div>
+        <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
+        
+        <a ng-click="deletePost(post)" ng-show="user.uid === post.creatorUID">delete |</a>
+        <a ng-href="#/edit/{{ post.$id }}" ng-show="user.uid === post.creatorUID">edit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container posts-page bounties">
+  <h3>Bounties</h3>
+  <div class="post row" ng-repeat="post in posts">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-md-9 col-xs-11">
+
+      <div class="info">
+           <a ng-href="#/posts/{{ post.$id }}"><h4>{{ post.title }}</h4></a>
+      </div>
+      <div>
+        <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
+        
+        <a ng-click="deletePost(post)" ng-show="user.uid === post.creatorUID">delete |</a>
+        <a ng-href="#/edit/{{ post.$id }}" ng-show="user.uid === post.creatorUID">edit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container posts-page bounties">
   <h3>Bounties</h3>
   <div class="post row" ng-repeat="post in posts">
     <div class="col-xs-1">

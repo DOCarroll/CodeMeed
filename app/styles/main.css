@@ -1,3 +1,11 @@
+.bounties {
+  margin-left:0;
+  margin-right:0;
+  float:left;
+  padding:0;
+  width:33%;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -62,7 +70,8 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 100%;
+    float:left;
   }
 
   /* Remove the padding we set earlier */
