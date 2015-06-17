@@ -11,7 +11,11 @@ app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $ro
     createProfile: function (user){
       var profile = {
         username: user.username,
-        md5_hash: user.md5_hash
+        md5_hash: user.md5_hash,
+        devscorePython: 0,
+        devscorePhp: 0,
+        devscoreRuby: 0,
+        devscoreJavascript: 0
       };
 
       var profileRef = $firebase(ref.child('profile'));

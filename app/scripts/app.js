@@ -65,6 +65,10 @@ var app = angular
         templateUrl: 'views/editComment.html',
         controller: 'PostViewCtrl'
       })
+      .when ('/follow/:userId', {
+        templateUrl:'views/profile.html',
+        controller: 'ProfileCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
