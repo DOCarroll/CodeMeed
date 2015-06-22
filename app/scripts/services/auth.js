@@ -6,12 +6,13 @@ app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $ro
 
   var Auth = {
     register: function (user) {
-      return auth.$createUser(user.email, user.password);
+      return auth.$createUser(user.email, user.password, user.github);
     },
     createProfile: function (user){
       var profile = {
         username: user.username,
         md5_hash: user.md5_hash,
+        github: user.github,
         devscorePython: 0,
         devscorePhp: 0,
         devscoreRuby: 0,

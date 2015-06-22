@@ -1,4 +1,12 @@
 /* Profile Styles */
+.feeds {
+  width:100%;
+}
+.profilePic {
+  height:200px;
+  float:left;
+  display:block;
+}
 .name {
   font-size:40px;
 }

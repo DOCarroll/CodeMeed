@@ -17,6 +17,7 @@ app.controller('AuthCtrl', function ($scope, $location, Auth, user) {
     Auth.register($scope.user).then(function(user) {
       return Auth.login($scope.user).then(function() {
         user.username = $scope.user.username;
+        user.github = $scope.user.github;
         return Auth.createProfile(user);
       }).then(function() {
         $location.path('/');
