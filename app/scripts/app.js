@@ -69,6 +69,10 @@ var app = angular
         templateUrl:'views/profile.html',
         controller: 'ProfileCtrl'
       })
+      .when('/discover', {
+        templateUrl: 'views/discover.html',
+        controller: 'DiscoverCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

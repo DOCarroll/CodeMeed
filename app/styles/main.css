@@ -16,6 +16,9 @@
   color:white;
 }
 
+.language-icon {
+  width:100%;
+}
 
 .bounties {
   margin-left:0;
@@ -23,6 +26,10 @@
   float:left;
   padding:0;
   width:33%;
+}
+
+.devscore {
+  text-align: center;
 }
 
 .browsehappy {
@@ -33,6 +40,14 @@
 }
 body {
   padding: 0;
+}
+
+.navImg {
+  height:50px;
+  float:left;
+  margin-left:50px;
+  margin-top:30px;
+  clear:right;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

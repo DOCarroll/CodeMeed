@@ -8,7 +8,10 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="#/"><img src="../images/CodeMeedLogo_Big.png"></a>
+
   </div>
+      <a href="#/upload"><img class="navImg" src="../images/post.png"></a>
+      <a href="#/discover"><img class="navImg" src="../images/follow.png"></a>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,7 +24,6 @@
           </li>
           <li ng-show="signedIn()">
             <p class="navbar-text">{{ user.profile.username }}</p>
-            <a href="#/upload">Post</a>
             <a ng-href="#" ng-click="logout()">Logout</a>
           </li>
           <li ng-hide="signedIn()">

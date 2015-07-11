@@ -8,17 +8,49 @@
       <span class="name">
         {{ profile.username }}
       </span>
-      <a href="#/follow/{{ profile.username }}">Follow Me</a>
 
     </div>
   </div>
 
-  <div class="stats">
-      <h4>Javascript Score: {{ profile.devscoreJavascript}}</h4>
-      <h4>Php Score: {{ profile.devscorePhp}}</h4>
-      <h4>Python Score: {{ profile.devscorePython}}</h4>
-      <h4>Ruby Score: {{ profile.devscoreRuby}}</h4>
-    </div>
+
+
+<div class="row">
+   <div class="col-sm-6 col-md-3">
+         <img class ="language-icon" src="../images/javascript.png" 
+         alt="Generic placeholder thumbnail">
+         <h2 class="devscore">{{ profile.devscoreJavascript}}</h2>
+      </a>
+   </div>
+   <div class="col-sm-6 col-md-3">
+         <img class ="language-icon" src="../images/php.png"
+         alt="Generic placeholder thumbnail">
+         <h2 class="devscore">{{ profile.devscorePhp}}</h2>
+   </div>
+   <div class="col-sm-6 col-md-3">
+         <img class ="language-icon" src="../images/python.png"
+         alt="Generic placeholder thumbnail">
+         <h2 class="devscore">{{ profile.devscorePython}}</h2>
+   </div>
+   <div class="col-sm-6 col-md-3">
+         <img class ="language-icon" src="../images/ruby.png"
+         alt="Generic placeholder thumbnail">
+         <h2 class="devscore">{{ profile.devscoreRuby}}</h2>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   <div class="container posts-page bounties">
