@@ -16,7 +16,8 @@ app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $ro
         devscorePython: 0,
         devscorePhp: 0,
         devscoreRuby: 0,
-        devscoreJavascript: 0
+        devscoreJavascript: 0,
+        userId: user.uid
       };
 
       var profileRef = $firebase(ref.child('profile'));

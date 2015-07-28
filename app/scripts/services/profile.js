@@ -5,7 +5,7 @@ app.factory('Profile', function ($window, FIREBASE_URL, $firebase, Post, $q) {
 
 	var profile = {
 		getAll: function (){
-			return $firebase(ref.child('profile')).$getIndex();
+			return $firebase(ref.child('profile')).$asObject();
 		},
 		get: function (userId) {
 			return $firebase(ref.child('profile').child(userId)).$asObject();
