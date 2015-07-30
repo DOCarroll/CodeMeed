@@ -1,7 +1,7 @@
 <div>
   <h4>
 	{{post.title}} :{{post.creator}}
-  <a ng-href="#/edit/{{post.$id}}">edit</a>
+  <a ng-href="#/edit/{{ post.$id }}" ng-show="user.uid === post.creatorUID">edit</a>
   </h4>
   <p>{{post.body}}</p>
   <pre>{{post.content}}</pre>
