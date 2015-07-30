@@ -1,45 +1,31 @@
-<div class="container posts-page bounties">
-  <h3>Bounties</h3>
-  <div class="post row" ng-repeat="post in posts">
-    <div class="col-xs-1">
-    </div>
-    <div class="col-md-9 col-xs-11">
-
-      <div class="info">
-           <a ng-href="#/posts/{{ post.$id }}"><h4>{{ post.title }}</h4></a>
-      </div>
-      <div>
-        <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
-        
-        <a ng-click="deletePost(post)" ng-show="user.uid === post.creatorUID">delete |</a>
-        <a ng-href="#/edit/{{ post.$id }}" ng-show="user.uid === post.creatorUID">edit</a>
-      </div>
-    </div>
-  </div>
+<div class="leftBox">
+<h3>Bounties</h3>
+<md-content class="leftList">
+    <md-list>
+      <hr />
+      <md-list-item class="md-3-line bounty" ng-repeat="post in posts">
+        <img ng-src="../images/{{post.language}}.png" class="small md-avatar" />
+        <div class="md-list-item-text">
+          <a ng-href="#/posts/{{ post.$id }}"><h4>{{ post.title }}</h4></a>
+          <p>{{ post.language }}</p>
+          <h5>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></h5>
+        </div>
+        <hr />
+      </md-list-item>
+</md-list>
+</md-content>
 </div>
 
-<div class="container posts-page bounties">
+<div class="weekly">
   <h3>Weekly Challenge</h3>
+  <img ng-src="../images/weekly.png" />
+  <p>This week CodeMeed challenges you to build a Reddit-clone using angularJS and firebase! As always, you may use any other technologies available to angularJS. E-mail us a link to your github repository, and if we like your application we will feature your application as well as reward you with 500 Javascript Developer Points, good luck! May the odds be ever in your favor.</p>
+
+  <p>Some helpful links:
+    <ul>
+      <a href="https://material.angularjs.org/latest"><li>AngularJS API</li></a>
+      <a href="https://thinkster.io/learn-to-build-realtime-webapps/"><li>Thinkster.io Walkthrough</li></a>
+    </ul>
+  </p>
     
-</div>
-
-
-<div class="container posts-page bounties">
-  <h3>Recent Activity</h3>
-  <div class="post row" ng-repeat="post in posts">
-    <div class="col-xs-1">
-    </div>
-    <div class="col-md-9 col-xs-11">
-
-      <div class="info">
-           <a ng-href="#/posts/{{ post.$id }}"><h4>{{ post.title }}</h4></a>
-      </div>
-      <div>
-        <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
-        
-        <a ng-click="deletePost(post)" ng-show="user.uid === post.creatorUID">delete |</a>
-        <a ng-href="#/edit/{{ post.$id }}" ng-show="user.uid === post.creatorUID">edit</a>
-      </div>
-    </div>
-  </div>
 </div>

@@ -1,12 +1,6 @@
 <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
     <a class="navbar-brand" href="#/"><img src="../images/CodeMeedLogo_Big.png"></a>
 
   </div>
@@ -17,14 +11,14 @@
   <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
           <li ng-show="signedIn()">
-            <a ng-href="#/users/{{ user.profile.uid }}">
-              <img ng-src="http://www.gravatar.com/avatar/{{ user.profile.md5_hash }}" class="nav-pic" />
-                {{ currentUser.username }}
-            </a>
+              <a class="profileLink" href="#/users/{{ user.profile.userId}}"><img ng-src="http://www.gravatar.com/avatar/{{ user.profile.md5_hash }}" class="nav-pic right" /></a>
           </li>
           <li ng-show="signedIn()">
-            <p class="navbar-text">{{ user.profile.username }}</p>
-            <a ng-href="#" ng-click="logout()">Logout</a>
+            <h6>Python: {{ user.profile.devscorePython}}</h6>
+            <h6>Php: {{ user.profile.devscorePhp}}</h6>
+            <h6>Ruby: {{ user.profile.devscoreRuby}}</h6>
+            <h6>Javascript: {{ user.profile.devscoreJavascript}}</h6>
+            <a ng-href="#" ng-click="logout()"class="logout">Logout</h6>
           </li>
           <li ng-hide="signedIn()">
             <a href="#/login">Login</a>

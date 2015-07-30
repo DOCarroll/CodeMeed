@@ -1,6 +1,10 @@
-<div class="container posts-page bounties">
+<div class="userList">
   <h3>Users</h3>
+  <hr />
   <div class="post row" ng-repeat="profile in profiles">
+  <img ng-src="http://www.gravatar.com/avatar/{{ profile.md5_hash }}" class="md-avatar" />
    <a href="#/users/{{ profile.userId}}">{{ profile.username }}</a>
+   <span>{<b>Python:</b> {{profile.devscorePython}} <b>Php:</b> {{profile.devscorePhp}} <b>Ruby:</b> {{profile.devscoreRuby}} <b>Javascript:</b> {{profile.devscoreJavascript}}}</span>
+   <hr />
    </div>
  </div>
