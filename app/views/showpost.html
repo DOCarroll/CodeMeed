@@ -14,7 +14,7 @@
       <a ng-href="#/users/{{ comment.creatorUID }}">
           {{ comment.creator }}
         </a>
-        <a ng-href="" ng-show="user.uid === post.creatorUID">Award</a>
+        <a ng-href="#/" ng-click="complete(post)"  ng-show="user.uid === post.creatorUID">Award</a>
         <a ng-href=""
         ng-click="deleteComment(comment)"
         ng-show="signedIn() && comment.creatorUID === user.uid">
